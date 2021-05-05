@@ -11,15 +11,16 @@ const App = () => {
 
     if(!localStorage.getItem('username'))  //if not logged in
 
-    return <LoginForm />
+    return <LoginForm />;
 
     return (
         <ChatEngine
         height="100vh"
-        projectID="7fbaabd6-a342-4dff-8c67-33f095c8274a"
+        projectID='7fbaabd6-a342-4dff-8c67-33f095c8274a'
         userName={localStorage.getItem('username')}
         userSecret={localStorage.getItem('password')}
         renderChatFeed={(chatAppProps) => <ChatFeed {...chatAppProps}/>}
+        
         />
     );
 };
